@@ -238,7 +238,7 @@ button {
     transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   }
 nav {
-  background-color: rgba(131, 129, 128, 0.427);
+  background-color: rgba(211, 207, 205, 0.26);
   backdrop-filter: blur(3px);
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
