@@ -1,0 +1,501 @@
+.main {
+  background-color: rgba(0, 0, 0, 0.301);
+  height: 100vh;
+}
+
+.navbar-nav {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-toggler{
+  outline: none !important;
+  border: none;
+}
+.nav-item{
+  border-radius: 15px;
+}
+.nav-item:hover{
+  background-color: rgba(255, 255, 255, 0.277);
+
+}
+
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.hamburger {
+  outline: none !important;
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: rgb(30, 28, 28);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+
+.signupBtn {
+  width: 120px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+  padding: 10px;
+  gap: 9px;
+  color: white;
+  background: linear-gradient(to right, rgb(128, 128, 255), rgb(183, 128, 255));
+  position: relative;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.212);
+}
+
+.arrow {
+  position: absolute;
+  right: 3.5px;
+
+  background-color: rgb(255, 255, 255);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.signupBtn:hover .arrow {
+  animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.dark {
+  background-image: url("https://res.cloudinary.com/dq7brjjnz/image/upload/v1713282075/Sunrises_and_sunsets_Japan_Osaka_Advertisement_593698_3840x2400_iqgfko.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+button {
+  outline: none;
+    position: relative;
+    margin: 0;
+    padding: 17px 35px;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #302b2b;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+    border-radius: 10px;
+    color: #f8f9fa;
+    font-weight: 400;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  button span {
+    color: #e4e7ed;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+  }
+  
+  button:hover {
+    animation: rotate624 0.7s ease-in-out both;
+  }
+  
+  button:hover span {
+    animation: storm1261 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+  
+  @keyframes rotate624 {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+  
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+  
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes storm1261 {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+  
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+  
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+  
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }
+  
+  .btn-shine {
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+    height: 40px;
+    background-color: #17161652;
+  }
+  
+  .btn-shine span {
+    z-index: 20;
+  }
+  
+  .btn-shine:after {
+    background: #101110;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.4;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+  
+  .btn-shine:hover:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+nav {
+  background-color: rgba(131, 129, 128, 0.427);
+  backdrop-filter: blur(3px);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.main h1 {
+  font-family: "Sacramento", cursive;
+  color: white;
+  font-size: 100px;
+  white-space: nowrap;
+}
+
+@media (max-width: 622px) {
+  .main h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 494px) {
+  .main h1 {
+    font-size: 70px;
+  }
+}
+.text {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.steps .card {
+  border: none;
+}
+
+.d {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.search {
+  background-image: url("https://res.cloudinary.com/dq7brjjnz/image/upload/v1713287266/city-Osaka-Japan-building-Japanese-sign-2248592-wallhere.com_js7ry7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.ds {
+  background-color: rgba(14, 14, 14, 0.36);
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+}
+
+.ds label {
+  color: rgb(223, 217, 217);
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+.ds input {
+  background-color: rgba(240, 255, 252, 0);
+  border: none;
+  outline: white;
+  color: white;
+}
+
+::placeholder {
+  color: rgba(255, 4, 4, 0.714);
+ 
+}
+
+.btn-conteiner {
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background: #171616;
+  --color-outline: #0a090980;
+  --color-shadow: #00000080;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+.btn-title svg {
+  margin-bottom: 3px;
+  margin-right: 6px;
+}
+.btn-content:hover,
+.btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+.featured .card {
+  padding: 50px;
+  border-radius: 30px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 2px 2px 0px 4px;
+}
+
+footer{
+  font-family: "Bree Serif", serif;
+  padding: 80px;
+  background-image: url("https://res.cloudinary.com/dq7brjjnz/image/upload/v1713323617/74d54c0c-a857-4f4b-9648-f825ab4b49e8.png");
+  background-size: cover;
+  background-position: center;
+  color: rgb(26, 23, 23);
+  background-attachment: fixed;
+}
+
+.footer{
+  padding: 15px;
+  background-color: #fdfcfca0;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+}
+.footer p:hover{
+  text-decoration: underline;
+}
+
+.y{
+  white-space: nowrap;
+}
+
+.contact svg{
+  font-size: 50px !important;
+}
+
+.insta{
+  padding: 3px;
+  border: 2px solid;
+  border-radius: 15px;
+}
+.contact .insta:hover{
+  color: white;
+  background-color: #c60a42;
+}
+
+.linked{
+  padding: 3px;
+  border: 2px solid;
+  border-radius: 15px;
+}
+.contact .linked:hover{
+  color: white;
+  background-color: #0a10c6;
+}
+
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255); /* Semi-transparent white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's above other content */
+}
+
+
+
+/* Styles for the content */
+.search-container {
+  display: none; /* Initially hide content */
+}
